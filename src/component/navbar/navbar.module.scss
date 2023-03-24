@@ -1,0 +1,31 @@
+.navBar{
+    padding: 10px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navLogo{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .navContainer{
+        .navWrapper{
+            display: flex;
+            list-style: none;
+
+            .navItem{
+                margin-right: 15px;
+                
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        
+    }
+}
