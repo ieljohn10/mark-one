@@ -39,12 +39,12 @@
                     transition: transform .5s;
                     transform: scaleX(0);
                     transform-origin: right;
-                    background-color: #F4B183;
+                    background-color: #BF0426;
                 }
 
                 &:hover{
                     cursor: pointer;
-                    color: #DFA67B;
+                    color: #BF0426;
                 }
                 
                 &:hover::after{

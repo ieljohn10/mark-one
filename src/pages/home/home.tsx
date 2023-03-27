@@ -13,7 +13,7 @@ const HomePage = () => {
                     <h1 className={style.homeTitle}>Shop Here</h1>
                     <h3 className={style.subTitle}>You want something? We got you!</h3>
                     <p className={style.homeDesc}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ut deleniti officiis exercitationem totam!</p>
-                    <button className={style.exploreBtn}><b>Explore</b></button>
+                    <button className={style.exploreBtn}><b>Shop Now!</b></button>
                 </div>
 
                 <div className={style.socialNetworks}>
