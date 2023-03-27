@@ -8,10 +8,20 @@ const NavBar = () => {
         e.preventDefault();
         navigate('/');
     }
-    
+
     const aboutNav = (e:any) => {
         e.preventDefault();
         navigate('/about');
+    }
+
+    const shopNav = (e:any) => {
+        e.preventDefault();
+        navigate('/shop');
+    }
+
+    const carttNav = (e:any) => {
+        e.preventDefault();
+        navigate('/cart');
     }
 
     const contactNav = (e:any) => {
@@ -25,8 +35,8 @@ const NavBar = () => {
             <nav className={style.navContainer}>
                 <ul className={style.navWrapper}>
                     <li className={style.navItem} onClick={aboutNav}>About</li>
-                    <li className={style.navItem}>Shop</li>
-                    <li className={style.navItem}>Cart</li>
+                    <li className={style.navItem} onClick={shopNav}>Shop</li>
+                    <li className={style.navItem} onClick={carttNav}>Cart</li>
                     <li className={style.navItem} onClick={contactNav}>Contact</li>
                 </ul>
             </nav>
