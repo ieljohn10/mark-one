@@ -8,7 +8,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // background-color: aliceblue;
+    background-color: #ffff;
+    z-index: 2;
 
     .navLogo{
         &:hover{

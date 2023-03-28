@@ -1,7 +1,7 @@
 import style from './navbar.module.scss';
 import { useNavigate } from 'react-router-dom';
 
-const NavBar = () => {
+function NavBar() {
     const navigate = useNavigate();
 
     const mainNav = (e:any) => {
