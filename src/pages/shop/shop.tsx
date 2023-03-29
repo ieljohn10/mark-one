@@ -1,34 +1,46 @@
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './shop.scss';
 
 const ShopPage = () => {
     const [data, setData] = useState([])
-    const [loading, setLoading] = useState(true)
+    // const [loading, setLoading] = useState(true)
+		const [searchVal, setSearchVal] = useState('');
 
-    useEffect(()=>{
-        // https://www.fakeshop-api.com/
-        (() => {
-            fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json())
-            .then(json=>setData(json))
-           setLoading(false)
-        })()
-       
-    },[])
-    console.log(data)
+		useEffect(() => {
+			axios.get('https://fakestoreapi.com/products')
+			.then(response => setData(response.data))
+			.catch(error => console.log(error));
+		}, [])
+
+		const handleInput = (e:any) => {
+			setSearchVal(e.target.value);
+			// console.log(e.target.value)
+		}
+
+		const handleFilter = () => {
+			console.log(searchVal)
+			const dataFiltered = data.filter((item:any) => {
+				// return item.includes(searchVal);
+			});
+			console.log(dataFiltered)
+		}
+
+
 
     return (        
         <div className='shopPage'>
+					<input 
+						onChange={handleInput}
+						placeholder="Search Products"
+					/>
+					<button onClick={handleFilter}>Search</button>
 					<div className="productContainer">
-						{data.map((item:any)=>{
-							return(
-									<div className="productItem" key={item.id}>
-										<img className='card-image' src={item.image} alt=''/>
-										<div className="productitle">{item.title}</div>
-										{/* <div className="heading">{item.description}</div> */}
-									</div>
-								)
-						})}
+					{/* <ul>
+          {data.map((product:any) => {
+            return <li key={product} className='list-item'><a href='#'>{product}</a></li>
+          })}
+        </ul> */}
 					</div>
         </div> 
     )
