@@ -32,13 +32,13 @@
 
 							.aboutTitle{
 								margin-bottom: 20px;
-                // font-family: 'Roboto';
-                font-style: normal;
-                text-transform: uppercase;
-                font-weight: 700;
-                font-size: 74px;
-                line-height: 55px;
-                color: #1E2832;
+								// font-family: 'Roboto';
+								font-style: normal;
+								text-transform: uppercase;
+								font-weight: 700;
+								font-size: 74px;
+								line-height: 55px;
+								color: #1E2832;
 							}
 
 							.aboutDesc{
@@ -56,16 +56,26 @@
                 justify-content: center;
                 font-size: 1.2em;
                 padding: 0.7em 1.4em;
-                background-color: #1E2832;
+                background-color: #725AC1;
                 text-decoration: none;
                 border: none;
                 // border-radius: 0.5em;
                 color: #ffff;
                 box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+								transition: ease-out 0.5s;
+								border: 2px solid #725AC1;
+								border-radius: 10px;
+								box-shadow: inset 0 0 0 0 #FFD966;
 							}
 
 							.exploreBtn:hover{
 								cursor: pointer;
+								color: #725AC1;
+  							box-shadow: inset 0 -100px 0 0 #FFD966;
+							}
+
+							.exploreBtn:active {
+								transform: scale(0.9);
 							}
 						}
         }
