@@ -14,7 +14,9 @@
 	.cardContainer{
 		width: 80%;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-around;
+		gap: 40px;
 
 		.cardItem{
 			width: 290px;
@@ -40,6 +42,7 @@
 		}
 
 		.cardItem:before {
+			padding-bottom: 20px;
 			content: "";
 			position: absolute;
 			top: 0;
